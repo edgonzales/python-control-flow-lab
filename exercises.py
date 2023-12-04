@@ -10,13 +10,13 @@
 
 # Hints:  Use the in operator to check if a character is in another string
 #         For example, if some_char in 'abc':
-"""vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
+vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
 
 letter = input('Please enter a letter from the alphabet (a-z or A-Z): ')
 if letter in vowels:
     print(f'The letter "{letter}" is a vowel')
 else:
-    print(f'The letter "{letter}" is a consonant')"""
+    print(f'The letter "{letter}" is a consonant')
 
 
 
@@ -28,10 +28,10 @@ else:
 # 2. Print the following message:
 #      - What you entered is xx characters long
 # 3. Return to step 1, unless the word 'quit' was entered.
-"""phrase = ""
+phrase = ""
 while phrase != 'quit':
     phrase = input('Please enter a word or phrase: ').lower()
-    print(f'What you entered is {len(phrase)} characters long')"""
+    print(f'What you entered is {len(phrase)} characters long')
 
 
 
@@ -51,14 +51,14 @@ while phrase != 'quit':
 # Use the int() function to convert the string returned from input() into an integer
 # Start with an if that checks if the age is less than 3
 
-# age = input('Input the dog\'s age: ')
+age = input('Input the dog\'s age: ')
 
-# if int(age) < 3:
-#     dogYears = int(age) * 10
-#     print(f'The dog\'s age in dog years is {dogYears}')
-# else:
-#     dogYears = 20 + int(age) * 7
-#     print(f'The dog\'s age in dog years is {dogYears}')
+if int(age) < 3:
+    dogYears = int(age) * 10
+    print(f'The dog\'s age in dog years is {dogYears}')
+else:
+    dogYears = 20 + int(age) * 7
+    print(f'The dog\'s age in dog years is {dogYears}')
 
 
 
@@ -76,7 +76,7 @@ while phrase != 'quit':
 #      isosceles - exactly two sides are the same length
 # 3. Print a message such as:
 #      - A triangle with sides of <a>, <b> & <c> is a <type of triangle> triangle
-print('Enter the lengths od three side of a triangle:')
+# print('Enter the lengths od three side of a triangle:')
 a = input('a:')
 b = input('b:')
 c = input('c:')
@@ -107,8 +107,19 @@ else:
 # Hints:
 # The next number is found by adding the two numbers before it
 # Use a while loop with a looping variable, or look into Python ranges, e.g.:
-#   for n in range(50):
-
+a = 0
+b = 1
+for n in range(50):
+    a = 0
+    b = 1
+for term in range (50):
+    if term < 2:
+        print(f'term: {term} / number: {term}')
+    else:
+        c = a + b
+        print(f'term: {term} / number: {c}')
+        a = b
+        b = c
 
 
 
@@ -134,6 +145,24 @@ else:
 #
 # After setting the likely season, you can use another if...elif...else statement to "adjust" if
 # the day number falls within a certain range.
-
+month = input('Enter the month of the season (Jan - Dec): ')
+day = int(input('Enter the day of the month: '))
+if month in ('Jan', 'Feb', 'Mar'):
+    season = 'Winter'
+elif month in ('Apr', 'May', 'Jun'):
+    season = 'Spring'
+elif month in ('Jul', 'Aug', 'Sep'):
+    season = 'Summer'
+else:
+    season = 'Fall'
+if month == 'Mar' and day > 19:
+    season = 'Spring'
+elif month == 'Jun' and day > 20:
+    season = 'Summer'
+elif month == 'Sep' and day > 21:
+    season = 'Fall'
+elif month == 'Dec' and day > 20:
+    season = 'Winter'
+print(f'{month} {day} is in {season}')
 
 
