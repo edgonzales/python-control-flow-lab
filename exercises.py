@@ -28,10 +28,10 @@ else:
 # 2. Print the following message:
 #      - What you entered is xx characters long
 # 3. Return to step 1, unless the word 'quit' was entered.
-phrase = ""
+"""phrase = ""
 while phrase != 'quit':
     phrase = input('Please enter a word or phrase: ').lower()
-    print(f'What you entered is {len(phrase)} characters long')
+    print(f'What you entered is {len(phrase)} characters long')"""
 
 
 
@@ -51,7 +51,14 @@ while phrase != 'quit':
 # Use the int() function to convert the string returned from input() into an integer
 # Start with an if that checks if the age is less than 3
 
+age = input('Input the dog\'s age: ')
 
+if int(age) < 3:
+    dogYears = int(age) * 10
+    print(f'The dog\'s age in dog years is {dogYears}')
+else:
+    dogYears = 20 + int(age) * 7
+    print(f'The dog\'s age in dog years is {dogYears}')
 
 
 
