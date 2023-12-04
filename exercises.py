@@ -51,14 +51,14 @@ while phrase != 'quit':
 # Use the int() function to convert the string returned from input() into an integer
 # Start with an if that checks if the age is less than 3
 
-age = input('Input the dog\'s age: ')
+# age = input('Input the dog\'s age: ')
 
-if int(age) < 3:
-    dogYears = int(age) * 10
-    print(f'The dog\'s age in dog years is {dogYears}')
-else:
-    dogYears = 20 + int(age) * 7
-    print(f'The dog\'s age in dog years is {dogYears}')
+# if int(age) < 3:
+#     dogYears = int(age) * 10
+#     print(f'The dog\'s age in dog years is {dogYears}')
+# else:
+#     dogYears = 20 + int(age) * 7
+#     print(f'The dog\'s age in dog years is {dogYears}')
 
 
 
@@ -76,8 +76,17 @@ else:
 #      isosceles - exactly two sides are the same length
 # 3. Print a message such as:
 #      - A triangle with sides of <a>, <b> & <c> is a <type of triangle> triangle
+print('Enter the lengths od three side of a triangle:')
+a = input('a:')
+b = input('b:')
+c = input('c:')
 
-
+if a == b and b == c:
+    print(f'A triangle with sides of {a}, {b} & {c} is a equilateral triangle')
+elif a != b and b != c and a !=c:
+    print(f'A triangle with sides of {a}, {b} & {c} is a scalene triangle')
+else:
+    print(f'A triangle with sides of {a}, {b} & {c} is a isosceles triangle')
 
 
 
