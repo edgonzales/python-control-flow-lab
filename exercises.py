@@ -10,13 +10,13 @@
 
 # Hints:  Use the in operator to check if a character is in another string
 #         For example, if some_char in 'abc':
-vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
+"""vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
 
 letter = input('Please enter a letter from the alphabet (a-z or A-Z): ')
 if letter in vowels:
     print(f'The letter "{letter}" is a vowel')
 else:
-    print(f'The letter "{letter}" is a consonant')
+    print(f'The letter "{letter}" is a consonant')"""
 
 
 
@@ -28,7 +28,10 @@ else:
 # 2. Print the following message:
 #      - What you entered is xx characters long
 # 3. Return to step 1, unless the word 'quit' was entered.
-
+phrase = ""
+while phrase != 'quit':
+    phrase = input('Please enter a word or phrase: ').lower()
+    print(f'What you entered is {len(phrase)} characters long')
 
 
 
